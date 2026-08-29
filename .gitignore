@@ -1,0 +1,3 @@
+# clasp の接続情報（scriptId）は各自のプロジェクトに紐づくので載せない
+.clasp.json
+.clasprc.json
