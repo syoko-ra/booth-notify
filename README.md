@@ -27,10 +27,10 @@
 
 ```mermaid
 flowchart TB
-    U["利用者<br>公開サイトの予約入口"] -- "予約" --> CAL["Googleカレンダーの予約スケジュール<br>受付・自動確定"]
-    HOL["Holiday.gs<br>営業日カレンダーを1時間おきに照合"] -- "休業日にブロック予定" --> CAL
+    U["利用者<br>公開サイトの<br>予約入口"] -- "予約" --> CAL["Googleカレンダー<br>予約スケジュール<br>受付・自動確定"]
+    HOL["Holiday.gs<br>営業日カレンダーを<br>1時間おきに照合"] -- "休業日にブロック予定" --> CAL
     CAL -- "確定・取消のメール" --> CODE["Code.gs<br>5分おきに検出"]
-    CAL -- "予約済みの時間帯" --> BOARD["Board.gs<br>JSONを返すWebアプリ"]
+    CAL -- "予約済みの時間帯" --> BOARD["Board.gs<br>JSONを返す<br>Webアプリ"]
     CODE -- "投稿" --> SLACK["Slack<br>スタッフへ通知"]
     BOARD -- "60秒おきに取得" --> MON["館内モニター<br>booth.html"]
 
